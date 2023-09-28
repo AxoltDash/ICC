@@ -9,6 +9,11 @@ import icc.figuras.Elipse;
 
 public class Prueba {
 
+
+// public int min = 0;
+// public int max = 4;
+// public String mensaje = "Bienvenido al programa que\n";
+
     public static int getInt(String mensaje, String error, int min, int max) {
         int val;
         Scanner scn = new Scanner(System.in);
@@ -54,6 +59,10 @@ public class Prueba {
         int opcion;
         String mensaje, error;
         StringBuilder sb;
+
+        mensaje = "HOLA";
+        error = "ERROR";
+        getInt(mensaje, error, 0, 3);
     }
 
 }
