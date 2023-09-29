@@ -1,0 +1,38 @@
+Testsuite: icc.figuras.ElipseBCircleTest
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.216 sec
+------------- Standard Output ---------------
+elipsePerfectTest:
+	Revisa que el circulo encaje perfectamente en un elipse.
+	[0.75/1.0]
+elipseLessTest:
+	Revisa que circulos mas chicos que el elipse no encajen en el elipse.
+	[0.0/1.0]
+elipseMoreTest:
+	Revisa que circulos mas grandes que el elipse no encajen en el elipse.
+	[1.0/1.0]	Passed.
+===========================================================================
+  (Aciertos: 1.75/3.0)                   Puntaje: 58.333333333333336/100.0 
+===========================================================================
+ Puntaje Total:                                   58.333333333333336/100.0 
+===========================================================================
+------------- ---------------- ---------------
+
+Testcase: elipsePerfectTest took 0.043 sec
+	FAILED
+null
+junit.framework.AssertionFailedError
+	at icc.figuras.ElipseBCircleTest.elipsePerfectTest(ElipseBCircleTest.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+Testcase: elipseLessTest took 0.032 sec
+	FAILED
+null
+junit.framework.AssertionFailedError
+	at icc.figuras.ElipseBCircleTest.elipseLessTest(ElipseBCircleTest.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+Testcase: elipseMoreTest took 0.023 sec
