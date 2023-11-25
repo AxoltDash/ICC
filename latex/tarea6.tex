@@ -1,0 +1,64 @@
+\documentclass{article} % Clase del documento
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\title{\textbf{Introducci\'on a Ciencias de la Computaci\'on (I)}}
+\author{\textbf{P\'erez Servin Darshan Israel}}
+\date{\textbf{Tarea 6: Herencia\\ Fecha de entrega: Mi\'ercoles 22 de Noviembre del 2023}} % Fecha actual
+
+\begin{document}
+\maketitle % Crea el título con la información proporcionada anteriormente
+
+\begin{enumerate}
+\item \textbf{Explica qué significa que un atributo o método tenga visibilidad \texttt{protected}.}\\\\
+    Un atrubuto o método que sea protected puede ser visible solo dentro de la clase
+    y en sus clases heredadas, a comparación del privado que solo  es visible dentro 
+    de la clase padre.\\
+    Por ejemplo si se crea un método o atribúto en una clase y de esta se hereda, este
+    mismo puede ser usado en la clase heredada sin necesidad de alterar lo que se encuentra
+    en la clase ``padre".
+\item \textbf{Indica la diferencia entre la sobrecarga de un método y la redefinición de un método.}
+    \begin{enumerate}[label={}]
+        \item \textbf{Sobrecarga de Método:}\\
+        Una sobrecarga de método Es tener varios métodos con el mismo nombre en una sola clase, 
+        aunque sean diferentes en lo que hagan.
+        \item \textbf{Redefinición de Método}\\
+        Una redefinición es cuando se crea un método en una clase padre y se hereda en otra clase
+        bajo el mismo nombre implementando nuevas funciones sobre el anterior.
+    \end{enumerate}
+
+\item \textbf{Indica cuáles atributos y métodos de una clase pueden ser heredados a otra.}\\
+    Los atributos y métodos que se pueden heredar de una clase a otra son aquellos que se 
+    encuentran en \texttt{protected} y en \texttt{public}. No se pueden heredar aquellos que se
+    encuentren como \texttt{final} o en \texttt{static}.
+\item \textbf{Menciona de qué manera se relaciona la redefinición de métodos con el polimorfismo.}\\
+    La redefinición de métodos, ocurre cuando una clase hija proporciona una implementación 
+    nueva y específica para un método que ya está definido en su clase padre. Usualmente
+    para evitar errores en el compilador se opta por usar la sintaxis ``\texttt{@Override}" antes
+    del método. Esto se lleva de la mano con el polimorfismo, ya que este se refiere cuando
+    un método que se redefine con una firma idéntica o compatible a su método de la clase base, de
+    manera de que se puede invocar de dos formas diferentes. Como por ejemplo estos dos objetos
+    serían distintos y por ende si se invoca con el mismo método, actuaría segun que hace el método
+    de la clase:\\
+    \begin{lstlisting}[language=Java, title={CÓDIGO EJEMPLO:}]
+        ClasePadre objeto1 = new ClasePadre();
+        ClasePadre objeto1 = new ClaseHija();
+        
+        objeto1.metodo();
+        //Hace lo que se encuentre en la clase padre
+        objeto2.metodo();
+        //Hace lo que se encuentre en la clase hija
+
+    \end{lstlisting}
+    
+\item \textbf{Menciona una diferencia y una similitud entre clases abstractas e interfaces.}\\\\
+    \textbf{Diferencias:}\\
+    En una clase abstracta se puede almacenar métodos ya sean abstractos o concretos.\\
+    En una intefaz SOLO se pueden almacenar métodos abstractos y variables finales.\\\\
+    \textbf{Similitud:}\\
+    Ambas se usan para de alguna manera "heredar" métodos que no estan definidos aún, una
+    buena guía para saber que métodos se pueden usar al heredarse.
+\end{enumerate}
+
+\end{document}
